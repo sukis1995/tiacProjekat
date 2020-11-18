@@ -1,0 +1,11 @@
+<div class="container">
+    <form [formGroup]="formGroup">
+    <div class="form group">
+    <label>Tekst</label>
+    <input type="text" formControlName="tekst" class="form-control" >
+    <input type="hidden" formControlName="idPost" [ngModel]="id" value="id" class="form-control" >
+    </div>
+    <button type="submit" class="btn btn-success" (click)="kreirajNoviKomentar()"> Kreiraj novi komentar</button>
+    </form>
+
+</div>

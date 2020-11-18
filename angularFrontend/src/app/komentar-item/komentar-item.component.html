@@ -1,0 +1,11 @@
+
+<div class="komentar">
+<p>{{komentar.tekst}}</p>
+<table class="table">
+    <tr><td>Ime korisnika: {{komentar.imeKorisnik}}</td><td>Datum i vreme:{{komentar.datumVreme}}</td></tr>
+</table>
+
+
+<button class="btn btn-primary" (click)="goToEdit(komentar.id)" >Edit</button>
+<button class="btn btn-danger" (click)="delete(komentar.id)" >Obrisi</button>
+</div>

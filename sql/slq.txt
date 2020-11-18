@@ -1,0 +1,10 @@
+CREATE USER IF NOT EXISTS user IDENTIFIED BY 'pass';
+
+DROP DATABASE IF EXISTS tiacProjekat;
+CREATE DATABASE tiacProjekat DEFAULT CHARACTER SET utf8;
+
+USE tiacProjekat;
+
+GRANT ALL ON tiacProjekat.* TO 'user'@'%';
+
+FLUSH PRIVILEGES;

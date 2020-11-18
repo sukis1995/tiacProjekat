@@ -1,0 +1,11 @@
+<div class="container">
+    <form [formGroup]="formGroup" *ngIf="formGroup">
+    <div class="form group">
+    <label>Tekst</label>
+    <input type="text" formControlName="tekst" class="form-control" >
+    <input type="hidden" formControlName="id"  value="id" class="form-control" >
+    </div>
+    <button type="submit" class="btn btn-success" (click)="editPost()"> Edit post</button>
+    </form>
+
+</div>

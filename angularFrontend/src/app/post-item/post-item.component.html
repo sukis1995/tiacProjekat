@@ -1,0 +1,18 @@
+
+<div class="box">
+    <p class="tekst">{{post.tekst}}</p>
+    <table class="table">
+    <tr><td>Srednja ocena:{{post.srednjaOcena}}</td><td>Ime korisnika: {{post.imeKorisnik}}</td><td> Datum i vreme:{{post.datumVreme}}</td></tr>
+    </table>
+    
+    
+   
+    <app-ocena [idPost]="post.id"></app-ocena>
+    <button class="btn btn-primary" (click)="promeniPost(post.id)">Promeni post</button>
+    <button class="btn btn-info" (click)="dodajKomentar(post.id)">Dodaj komentar</button>
+    <button class="btn btn-light" (click)="prikaziKomentare()">Prikazi komentare</button>
+    <button class="btn btn-danger" (click)="obrisiPost(post.id)">Obrisi post</button>
+    <div *ngIf="prikazani">
+    <app-komentari-post [id]="post.id"></app-komentari-post>
+    </div>
+</div>
